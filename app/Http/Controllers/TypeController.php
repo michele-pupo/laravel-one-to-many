@@ -13,9 +13,9 @@ class TypeController extends Controller
      */
     public function index()
     {
-        //
+        $types = Type::all();
+        return view('admin.types.index', compact('types'));
     }
-
     /**
      * Show the form for creating a new resource.
      */

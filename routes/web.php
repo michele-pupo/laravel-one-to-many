@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,7 +51,10 @@ Route::middleware(['auth', 'verified'])
 
             Route::get('/users', [DashboardController::class, 'users'])->name('users');
 
-
+            // rotta di risosrsa per i progetti
             Route::resource('projects', ProjectController::class);
+
+            // rotta di risorsa per i tipi di progetti
+            Route::resource('types', TypeController::class);
         }
 );
