@@ -28,6 +28,7 @@ class StoreProjectRequest extends FormRequest
             'used_technologies' => 'required|max:255',
             'project_date' => 'required|date',
             'link_github' => 'required|max:255',
+            'type_id'=> 'nullable|exists:types,id',
         ];
     }
 

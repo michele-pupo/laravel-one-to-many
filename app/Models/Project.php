@@ -16,7 +16,8 @@ class Project extends Model
                            'description',  
                            'used_technologies',
                            'project_date', 
-                           'link_github'
+                           'link_github',
+                           'type_id'
                           ];
 
     // aggiungiamo la possibilità di leggere le tabelle a lui collegate
