@@ -9,7 +9,7 @@
         <img class="w-75" src="{{asset('storage/' . $project->project_image)}}" alt="Copertina progetto">
         <div class="text-center">
             <p class="fs-5">{{$project->description}}</p>
-            <h6 class="text-danger">{{$project->type->title}}</h6>
+            <h6 class="text-danger fs-3">{{$project->type->title}}</h6>
             <h6>{{$project->used_technologies}}</h6>
             <h6>{{ \Carbon\Carbon::parse($project->project_date)->format('d/m/Y') }}</h6>
             <h6><a href="{{$project->link_github}}">link progetto github</a></h6>
