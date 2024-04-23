@@ -12,7 +12,7 @@
 
         <div class="mb-3">
             <label for="title" class="form-label">Tipologia</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" name="title" value="{{old('title') ?? $type->title}}" required>
+            <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{old('title') ?? $type->title}}" required>
             @error('title')
             <div class="invalid-feedback">
                 {{$message}}

@@ -30,11 +30,13 @@ class TypeController extends Controller
      */
     public function store(StoreTypeRequest $request)
     {
+        $request->validated();
         $newType = new Type();
 
         $newType->title = $request->title;
         $newType->description = $request->description;
 
+        $newType->fill($request->all());
         $newType->save();
 
         return redirect()->route('admin.types.show', $newType->id);
@@ -61,6 +63,10 @@ class TypeController extends Controller
      */
     public function update(StoreTypeRequest $request, Type $type)
     {
+        $request->validated();
+
+        $type->update($request->all());
+
         return redirect()->route('admin.types.index', $type->id);
     }
 
