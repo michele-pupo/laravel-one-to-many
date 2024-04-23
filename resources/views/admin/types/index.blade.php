@@ -30,7 +30,7 @@
     </tbody>
     </table>
     <div class="d-flex justify-content-center">
-        <button class="btn btn-primary mt-5"><a class="text-decoration-none " href="{{route('admin.projects.create')}}">Aggiungi progetto</a></button>
+        <button class="btn btn-primary mt-5"><a class="text-decoration-none " href="{{route('admin.types.create')}}">Aggiungi categoria</a></button>
     </div>
 </div>
 

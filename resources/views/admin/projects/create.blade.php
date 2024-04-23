@@ -71,7 +71,9 @@
             <label for="type" class="form-label">Tipologia</label>
             <select class="form-select" name="type_id" id="type_id">
                @foreach ($types as $type)
-                    <option value="{{$type->id}}">{{$type->title}}</option>
+                    <option value="{{$type->id}}" {{$type->id == old('$type->id') ? 'selected' : ''}}>
+                        {{$type->title}}
+                    </option>
                @endforeach 
             </select>
         </div>

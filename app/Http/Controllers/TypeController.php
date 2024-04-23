@@ -14,6 +14,7 @@ class TypeController extends Controller
     public function index()
     {
         $types = Type::all();
+
         return view('admin.types.index', compact('types'));
     }
     /**
@@ -21,7 +22,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.types.create');
     }
 
     /**
@@ -29,7 +30,14 @@ class TypeController extends Controller
      */
     public function store(StoreTypeRequest $request)
     {
-        //
+        $newType = new Type();
+
+        $newType->title = $request->title;
+        $newType->description = $request->description;
+
+        $newType->save();
+
+        return redirect()->route('admin.types.show', $newType->id);
     }
 
     /**
@@ -45,15 +53,15 @@ class TypeController extends Controller
      */
     public function edit(Type $type)
     {
-        //
+        return view('admin.types.edit', compact('type'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTypeRequest $request, Type $type)
+    public function update(StoreTypeRequest $request, Type $type)
     {
-        //
+        return redirect()->route('admin.types.index', $type->id);
     }
 
     /**
@@ -61,6 +69,7 @@ class TypeController extends Controller
      */
     public function destroy(Type $type)
     {
-        //
+        $type->delete();
+        return redirect(route('admin.types.index'));
     }
 }
