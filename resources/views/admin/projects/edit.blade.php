@@ -70,6 +70,17 @@
             </div>
             @enderror
         </div>
+
+        <div class="mb-3">
+            <label for="type" class="form-label">Tipologia</label>
+            <select class="form-select" name="type_id" id="type_id">
+               @foreach ($types as $type)
+                    <option value="{{$type->id}}" {{$type->id == $project->type->id ? 'selected' : ''}}>
+                        {{$type->title}}
+                    </option>
+               @endforeach 
+            </select>
+        </div>
         <button type="submit" class="btn btn-primary">Salva</button>
         <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Indietro</a>
     </form>
