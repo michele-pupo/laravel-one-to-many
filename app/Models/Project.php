@@ -18,4 +18,9 @@ class Project extends Model
                            'project_date', 
                            'link_github'
                           ];
+
+    // aggiungiamo la possibilità di leggere le tabelle a lui collegate
+    public function type(){
+        return $this->belongsTo(Type::class);
+    }
 }

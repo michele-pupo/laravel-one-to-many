@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('projects', function (Blueprint $table) {
             
             // con "constrained" verichiamo che ogni elemento inserito in una colonna abbia il corrispettivo nella tabella collegata
-            $table->foreignId('type_id')->nullable()->constrained();
+            $table->foreignId('type_id')->default(1)->constrained();
         });
     }
 
