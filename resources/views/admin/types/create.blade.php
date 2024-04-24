@@ -29,7 +29,7 @@
 
        
         <button type="submit" class="btn btn-primary">Salva</button>
-        <a href="{{ route('admin.types.index') }}" class="btn btn-secondary">Back</a>
+        <a href="{{ route('admin.types.index') }}" class="btn btn-secondary">Indietro</a>
     </form>
 </div>
 

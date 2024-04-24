@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container py-2">
-    <h1 class="text-center pb-4 display-5 fw-bold text-uppercase">Lista delle categorie</h1>
+    <h1 class="text-center pb-4 display-5 fw-bold text-uppercase">Lista tipologie di progetto</h1>
     <table class="table">
         <thead>
             <tr>
@@ -29,8 +29,9 @@
     
     </tbody>
     </table>
-    <div class="d-flex justify-content-center">
-        <button class="btn btn-primary mt-5"><a class="text-decoration-none " href="{{route('admin.types.create')}}">Aggiungi categoria</a></button>
+    <div class="d-flex justify-content-center gap-2">
+        <button class="btn btn-primary mt-5"><a class="text-decoration-none " href="{{route('admin.types.create')}}">Aggiungi tipologia</a></button>
+        <button class="btn btn-secondary mt-5"><a class="text-decoration-none " href="{{route('admin.index')}}">indietro</a></button>
     </div>
 </div>
 

@@ -33,8 +33,9 @@
     
     </tbody>
     </table>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center gap-2">
         <button class="btn btn-primary mt-5"><a class="text-decoration-none " href="{{route('admin.projects.create')}}">Aggiungi progetto</a></button>
+        <button class="btn btn-secondary mt-5"><a class="text-decoration-none " href="{{route('admin.index')}}">Indietro</a></button>
     </div>
 </div>
 
